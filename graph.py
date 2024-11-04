@@ -16,7 +16,7 @@ stop_words = set(stopwords.words('english'))
 
 # Function to preprocess text and remove stop words
 def preprocess_text(text):
-    text = re.sub(r'[^a-zA-Z\s]', '', text)  # Remove punctuation
+    text = re.sub(r'[^a-zA-Z\s]', ' ', text)  # Remove punctuation
     text = text.lower()  # Lowercase text
     words = text.split()  # Split text into words
     words = [word for word in words if word not in stop_words]  # Remove stop words
